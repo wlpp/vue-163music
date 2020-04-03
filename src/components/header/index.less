@@ -1,0 +1,146 @@
+.header {
+    width: 100%;
+    height: 70px;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
+    min-width: 1400px;
+    font-size: 0;
+
+    .header-box {
+        width: 1400px;
+        margin: 0 auto;
+    }
+
+    .header_left {
+        .logo {
+            float: left;
+            width: 90px;
+            height: 26px;
+            margin-top: 21px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .nav {
+            float: left;
+            margin-left: 50px;
+
+            .nav-item {
+                float: left;
+                height: 75px;
+                line-height: 70px;
+                padding: 0 20px;
+                font-size: 16px;
+                color: #a0a0a0;
+                position: relative;
+                cursor: pointer;
+
+                &:nth-of-type(2) {
+                    .nav-item-content {
+                        width: 244px;
+                    }
+
+                    i {
+                        color: #999
+                    }
+                }
+            }
+
+            .nav-item:hover {
+                color: #e91e63;
+            }
+
+            .nav-item:hover .nav-item-content {
+                display: block;
+            }
+
+            .active {
+                color: #e91e63;
+            }
+
+            .nav-item-content {
+                display: none;
+                width: 400px;
+                height: 70px;
+                line-height: normal;
+                background: #fff;
+                position: absolute;
+                top: 70px;
+                z-index: 99;
+                padding: 0 30px;
+                border-radius: 5px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
+
+                li {
+                    float: left;
+                    height: 60px;
+                    width: 80px;
+                    text-align: center;
+                    padding-top: 10px;
+                    font-size: 14px;
+
+                    i {
+                        font-size: 24px;
+                    }
+
+                    span {
+                        width: 100%;
+                        display: block;
+                        margin-top: 5px;
+                    }
+                }
+            }
+
+            .icon-huiyuan {
+                color: #dfba69;
+                font-size: 20px;
+            }
+        }
+
+        .header_right {
+            float: right;
+            .search {
+                float: left;
+
+                width: 240px;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 20px;
+                padding-right: 10px;
+                background-color: #f2f2f2;
+                overflow: hidden;
+                border-radius: 40px;
+                margin-top: 15px;
+
+                input {
+                    float: left;
+                    width: 90%;
+                    height: 100%;
+                    border: none;
+                    outline: none;
+                    background-color: #f2f2f2;
+                }
+
+                .icon-search {
+                    font-size: 22px;
+                }
+            }
+
+            .login {
+                float: right;
+                margin-top: 5px;
+                margin-left: 30px;
+                i{
+                    font-size: 40px;
+                    color: #ECECEC;
+                }
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,747 @@
+.home {
+
+    .carousel,
+    .playlist,
+    .newthumb,
+    .musician {
+        width: 1400px;
+        margin: 0 auto;
+    }
+
+    .carousel {
+        margin-top: 30px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    .type-title {
+        margin-bottom: 30px;
+
+        .title {
+            color: #333;
+            font-size: 24px;
+            float: left;
+            font-weight: bold;
+        }
+
+        .more {
+            float: right;
+            line-height: 32px;
+            color: #999;
+            cursor: pointer;
+
+            i {
+                font-size: 14px;
+                line-height: 32px;
+                float: right;
+                margin-left: 5px;
+            }
+
+            &:hover {
+                color: #e91e63;
+            }
+        }
+
+    }
+
+    .playlist {
+        .just_listen {
+            width: 284px;
+            height: 119px;
+            background: url('../../assets/images/just_listen.png') center center no-repeat;
+            background-size: 100% 100%;
+            cursor: pointer;
+        }
+
+        .box,
+        .item-box {
+            cursor: pointer;
+
+            .thumb {
+                width: 285px;
+                height: 285px;
+                border-radius: 10px;
+                position: relative;
+                margin-top: 30px;
+                overflow: hidden;
+            }
+
+            .item-thumb {
+                width: 190px;
+                height: 190px;
+                position: relative;
+                overflow: hidden;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                transition: all 1s ease;
+
+            }
+
+            .play {
+                width: 60px;
+                height: 60px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                // transition: all 1s ease;
+                border-radius: 50%;
+                font-size: 60px;
+                color: rgba(0, 0, 0, .7);
+                line-height: normal;
+
+            }
+
+            .playCnt {
+                position: absolute;
+                top: 6px;
+                right: 5px;
+                padding: 0 8px;
+                line-height: 24px;
+                color: #fff;
+                border-radius: 12px;
+                text-align: center;
+                background: rgba(0, 0, 0, .4);
+                font-size: 12px;
+                z-index: 1;
+
+                i {
+                    color: #fff;
+                }
+            }
+
+            .info {
+                margin-top: 15px;
+                line-height: 18px;
+                color: #666;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+
+        .playlist-right {
+            margin-left: 30px;
+            width: 1085px;
+        }
+
+        .playlist-right .item-box {
+            display: inline-block;
+            margin-right: 30px;
+            margin-bottom: 24px;
+
+            &:nth-of-type(5n) {
+                margin-right: 0;
+            }
+        }
+
+        .box:hover .thumb img,
+        .item-box:hover .item-thumb img {
+            transform: scale(1.2);
+        }
+
+        .box:hover .thumb .play,
+        .item-box:hover .item-thumb .play {
+            animation: pulse 1s;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(229, 0, 119, .4);
+                opacity: 0;
+            }
+
+            70% {
+                box-shadow: 0 0 0 30px rgba(229, 0, 119, 0);
+                opacity: .7;
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(229, 0, 119, 0);
+                opacity: 1;
+            }
+        }
+    }
+
+    .newsongs {
+        background-color: #f2f2f2;
+        height: 411px;
+        margin-top: 80px;
+
+        .container {
+            width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .container-left {
+            width: 319px;
+            height: 479px;
+            padding: 8px;
+            position: absolute;
+            left: 0;
+            top: -58px;
+
+            &::after {
+                content: '';
+                width: 100%;
+                height: 100%;
+                background: url('../../assets/images/song_layer.png') no-repeat;
+                background-size: 100% 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            img {
+                width: 50%;
+                display: block;
+                float: left;
+            }
+
+            .play-all {
+                width: 120px;
+                height: 40px;
+                text-align: center;
+                line-height: 36px;
+                color: #fff;
+                border: 2px solid #fff;
+                border-radius: 20px;
+                position: absolute;
+                z-index: 1;
+                right: 8.95522%;
+                bottom: 20px;
+                box-sizing: border-box;
+                cursor: pointer;
+            }
+        }
+
+        .container-right {
+            // width: 1081px;
+            margin-left: 335px;
+            padding-top: 23px;
+            position: relative;
+
+            .item-nav {
+                position: absolute;
+                left: 40px;
+                top: -40px;
+
+                span {
+                    margin-right: 26px;
+                    color: #333;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #e91e63;
+                    }
+
+                }
+
+                .active {
+                    color: #e91e63;
+                }
+            }
+
+            .item-warp {
+                margin-left: 20px;
+
+                .item {
+                    float: left;
+                    width: 47%;
+                    margin-left: 22px;
+                    margin-bottom: 15px;
+                    border-radius: 8px;
+
+                    // &:nth-of-type(2n) {
+                    //     margin-left: 0;
+                    // }
+                    &:hover .action {
+                        display: block;
+                    }
+                    &:hover .info {
+                        width: 50%;
+                    }
+                    &:hover .duration {
+                        display: none;
+                    }
+                    &:hover {
+                        background-color: rgba(0, 0, 0, .05);
+                    }
+                }
+
+
+
+                .img-box {
+                    float: left;
+                    width: 80px;
+                    height: 80px;
+                    overflow: hidden;
+                    position: relative;
+                    border-radius: 8px;
+                    cursor: pointer;
+
+                    img {
+                        width: 100%;
+                        transition: all .5s ease;
+                    }
+
+                    .play {
+                        width: 40px;
+                        height: 40px;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        opacity: 0;
+                        // transition: all 1s ease;
+                        border-radius: 50%;
+                        font-size: 40px;
+                        color: rgba(0, 0, 0, .7);
+                        line-height: normal;
+
+                    }
+
+                    &:hover .play {
+                        animation: pulse 1s;
+                    }
+
+                    &:hover img {
+                        transform: scale(1.2);
+                    }
+                }
+
+                .info {
+                    float: left;
+                    height: 80px;
+                    width: 62%;
+                    padding: 0 15px;
+                    cursor: pointer;
+
+                    p {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        line-height: 30px;
+                        font-size: 14px;
+
+                        &:first-of-type {
+                            padding-top: 10px;
+                        }
+                    }
+
+                    // &:hover {
+                    //     width: 145.5px;
+                    // }
+                }
+
+
+                .duration {
+                    float: right;
+                    color: rgba(51, 51, 51, .4);
+                    line-height: 80px;
+                    font-size: 14px;
+                    padding-right: 10px;
+                }
+
+                .action {
+                    float: left;
+                    margin-top: 23px;
+                    display: none;
+
+                    i {
+                        float: left;
+                        width: 40px;
+                        height: 40px;
+                        line-height: 40px;
+                        text-align: center;
+                        border-radius: 50%;
+                        color: #333;
+                        font-size: 22px;
+                        cursor: pointer;
+                    }
+
+                    .icon-icon_zhuanfa {
+                        font-size: 17px;
+                    }
+
+                    .icon-lingsheng {
+                        font-size: 21px;
+
+                    }
+                }
+            }
+        }
+    }
+
+    .newthumb {
+        margin-top: 80px;
+
+        .item {
+            float: left;
+            margin-right: 75px;
+            margin-bottom: 25px;
+            cursor: pointer;
+
+            &:nth-of-type(5n) {
+                margin-right: 0;
+            }
+        }
+
+        .img-box {
+            width: 220px;
+            height: 220px;
+            border-radius: 8px;
+            position: relative;
+
+            .img {
+                overflow: hidden;
+            }
+
+            img {
+                width: 100%;
+                border-radius: 8px;
+                position: relative;
+                z-index: 1;
+                transition: all .5s ease;
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 25px;
+                background: url('../../assets/images/album-cover-gold.png') 0 0 no-repeat;
+                background-size: 100% 100%;
+                z-index: 0;
+            }
+
+            .play {
+                width: 60px;
+                height: 60px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                // transition: all 1s ease;
+                border-radius: 50%;
+                font-size: 60px;
+                color: rgba(0, 0, 0, .7);
+                line-height: normal;
+                z-index: 3;
+            }
+
+            &:hover .play {
+                animation: pulse 1s;
+            }
+
+            &:hover img {
+                transform: scale(1.2);
+
+            }
+        }
+
+        p {
+            // font-size: 14px;
+            line-height: 26px;
+            color: #333;
+
+            &:nth-of-type(1) {
+                margin-top: 15px;
+
+            }
+
+            &:nth-of-type(2) {
+                color: #999;
+
+            }
+        }
+    }
+
+    .rank {
+        .type-title {
+            width: 1400px;
+            margin: 0 auto 30px;
+        }
+
+        .rank-box {
+            height: 474px;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 1400px;
+            margin: 0 auto;
+        }
+
+        .rank-carousel {
+            width: 462px;
+            height: 213px;
+            padding-top: 70px;
+
+            /deep/.el-carousel__arrow {
+                background-color: rgba(0, 0, 0, .3) !important;
+            }
+
+            /deep/ .el-carousel__arrow:hover {
+                background-color: rgba(0, 0, 0, .5) !important;
+            }
+
+            img {
+                width: 213px;
+                height: 213px;
+                border-radius: 10px;
+            }
+
+            .mask {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background: rgba(0, 0, 0, .5);
+                border-radius: 10px;
+                z-index: 99;
+            }
+
+            p {
+                text-align: center;
+            }
+
+            .title {
+                font-size: 18px;
+                font-weight: 700;
+                cursor: pointer;
+                margin-top: 20px;
+
+                &:hover {
+                    color: #e91e63;
+                }
+            }
+
+            .time {
+                opacity: .3;
+                margin-top: 15px;
+
+            }
+
+            .play_billboard {
+                width: 140px;
+                height: 40px;
+                text-align: center;
+                line-height: 38px;
+                border: 1px solid #333;
+                border-radius: 20px;
+                margin: 22px auto;
+                box-sizing: border-box;
+                font-weight: 700;
+                cursor: pointer;
+            }
+        }
+
+        /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+        .rank-itembox::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+            background-color: #f2f2f2;
+        }
+
+        .rank-itembox {
+            padding-left: 77px;
+            height: 432px;
+            width: 818px;
+            overflow-y: scroll;
+            padding-top: 30px;
+
+            .item {
+                line-height: 60px;
+                vertical-align: middle;
+                padding: 6px 0;
+                padding-left: 20px;
+
+                &:hover {
+                    border-radius: 10px;
+                    background-color: rgba(0, 0, 0, .05);
+                }
+
+                &:hover .action {
+                    display: inline-block;
+                }
+            }
+
+            .img-box {
+                width: 60px;
+                height: 60px;
+                vertical-align: middle;
+                margin-left: 30px;
+                margin-right: 30px;
+                cursor: pointer;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    border-radius: 10px;
+                }
+
+                .play {
+                    width: 25px;
+                    height: 25px;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+                    // transition: all 1s ease;
+                    border-radius: 50%;
+                    font-size: 25px;
+                    color: rgba(0, 0, 0, .7);
+                    line-height: normal;
+
+                }
+
+                &:hover .play {
+                    animation: pulse 1s;
+
+                }
+            }
+
+            span {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .title {
+                width: 336px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                margin-right: 10px;
+                cursor: pointer;
+
+                &:hover {
+                    color: #e91e63;
+                }
+            }
+
+            .singer {
+                color: rgba(51, 51, 51, .6);
+            }
+
+            .action {
+                display: none;
+                float: right;
+                margin-top: 12px;
+
+                i {
+                    float: left;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    border-radius: 50%;
+                    color: #333;
+                    font-size: 22px;
+                    cursor: pointer;
+                }
+
+                .icon-icon_zhuanfa {
+                    font-size: 17px;
+                }
+
+                .icon-lingsheng {
+                    font-size: 21px;
+
+                }
+            }
+        }
+    }
+
+    .musician {
+        margin-top: 40px;
+
+        .item {
+            float: left;
+            margin-right: 43px;
+            margin-bottom: 25px;
+            cursor: pointer;
+
+            &:nth-of-type(6n) {
+                margin-right: 0;
+            }
+        }
+
+        .img-box {
+            width: 197px;
+            height: 197x;
+            border-radius: 8px;
+            position: relative;
+
+            .img {
+                overflow: hidden;
+            }
+
+            img {
+                width: 100%;
+                border-radius: 8px;
+                position: relative;
+                z-index: 1;
+                transition: all .5s ease;
+            }
+
+            .play {
+                width: 60px;
+                height: 60px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                // transition: all 1s ease;
+                border-radius: 50%;
+                font-size: 60px;
+                color: rgba(0, 0, 0, .7);
+                line-height: normal;
+                z-index: 3;
+            }
+
+            &:hover .play {
+                animation: pulse 1s;
+            }
+
+            &:hover img {
+                transform: scale(1.2);
+
+            }
+        }
+
+        p {
+            // font-size: 14px;
+            line-height: 26px;
+            color: #333;
+
+            &:nth-of-type(1) {
+                margin-top: 15px;
+
+            }
+
+            &:nth-of-type(2) {
+                color: #999;
+
+            }
+        }
+    }
+}
